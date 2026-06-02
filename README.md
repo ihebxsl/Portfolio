@@ -93,7 +93,7 @@ filterProjects("all")     // Show all projects
 - [ ] Click hamburger menu on mobile (resize browser to <768px)
 - [ ] Click navigation links - should scroll smoothly
 - [ ] Click any project image - should open in modal
-- [ ] Press ESC in modal - should close
+- [ ] Press ESC in modal - should closesqd
 - [ ] Type invalid email in form - field should highlight
 - [ ] Submit empty form - should show errors
 - [ ] Fill form correctly and submit - should show success
