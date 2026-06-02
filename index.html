@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Iheb Salem | Software Engineer Portfolio</title>
+    <meta name="description" content="Portfolio website of Iheb Salem, a software engineer specializing in web development, AI, machine learning, and cloud technologies.">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Iheb Salem</h1>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav-links" role="navigation" aria-label="Main Navigation">
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- About Me Section -->
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>
+                Hello! I am a software engineer passionate about web development,
+                artificial intelligence, machine learning, and cloud computing.
+                I enjoy building innovative solutions and continuously learning
+                new technologies to improve my skills.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <article class="project" data-category="ml">
+                <h3>Phishing Detection Web Application</h3>
+
+                <figure>
+                    <img
+                        src="images/phishing-project.jpg"
+                        alt="Screenshot of a phishing detection web application dashboard"
+                        width="400">
+                    <figcaption>Machine Learning-based phishing detection system.</figcaption>
+                </figure>
+
+                <p>
+                    Developed a web application that identifies phishing websites
+                    using machine learning models and provides real-time risk analysis.
+                </p>
+            </article>
+
+            <article class="project" data-category="ml">
+                <h3>Battery State of Charge Prediction</h3>
+
+                <figure>
+                    <img
+                        src="images/battery-project.jpg"
+                        alt="Battery monitoring dashboard displaying State of Charge predictions"
+                        width="400">
+                    <figcaption>AI-powered battery monitoring solution.</figcaption>
+                </figure>
+
+                <p>
+                    Built a deep learning model to predict battery State of Charge (SoC)
+                    using real-world driving cycle data.
+                </p>
+            </article>
+
+            <article class="project" data-category="web">
+                <h3>Portfolio Website</h3>
+
+                <figure>
+                    <img
+                        src="images/portfolio-project.jpg"
+                        alt="Personal portfolio website homepage"
+                        width="400">
+                    <figcaption>Responsive developer portfolio website.</figcaption>
+                </figure>
+
+                <p>
+                    Designed and developed a responsive portfolio website to showcase
+                    projects, skills, and professional experience.
+                </p>
+            </article>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C# / .NET</li>
+                <li>ASP.NET</li>
+                <li>Machine Learning</li>
+                <li>Git & GitHub</li>
+                <li>Docker</li>
+                <li>SQL Databases</li>
+                <li>Cloud Computing</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <form id="contactForm" action="#" method="post">
+
+                <div>
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required>
+                </div>
+
+                <div>
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required>
+                </div>
+
+                <div>
+                    <label for="subject">Subject</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        required>
+                </div>
+
+                <div>
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Iheb Salem. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

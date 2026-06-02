@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Test</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        .test-result { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .pass { background-color: #d4edda; color: #155724; }
+        .fail { background-color: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <h1>Portfolio JavaScript Test Results</h1>
+    <div id="results"></div>
+
+    <script>
+        const results = [];
+
+        function test(name, condition) {
+            results.push({ name, passed: condition });
+            const div = document.createElement('div');
+            div.className = 'test-result ' + (condition ? 'pass' : 'fail');
+            div.textContent = (condition ? '✓' : '✗') + ' ' + name;
+            document.getElementById('results').appendChild(div);
+        }
+
+        // Test 1: DOM elements exist
+        test('Navigation element exists', document.querySelector('nav') !== null);
+        test('Header exists', document.querySelector('header') !== null);
+        test('Contact form has ID', document.querySelector('#contactForm') !== null);
+        
+        // Test 2: Project elements
+        const projects = document.querySelectorAll('.project');
+        test('Projects have class', projects.length === 3);
+        
+        // Test 3: Project categories
+        test('Projects have data-category', document.querySelector('.project[data-category="ml"]') !== null);
+        
+        // Test 4: Form fields
+        const formFields = ['name', 'email', 'subject', 'message'];
+        formFields.forEach(field => {
+            test(`Form field #${field} exists`, document.querySelector(`#${field}`) !== null);
+        });
+
+        // Test 5: Script loaded
+        test('filterProjects function available', typeof window.filterProjects === 'function');
+
+        const summary = document.createElement('h2');
+        const passed = results.filter(r => r.passed).length;
+        summary.textContent = `Summary: ${passed}/${results.length} tests passed`;
+        document.getElementById('results').insertAdjacentElement('afterend', summary);
+    </script>
+</body>
+</html>
